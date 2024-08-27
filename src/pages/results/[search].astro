@@ -3,7 +3,7 @@ import Layout from "@layouts/Layout.astro";
 const {search} = Astro.params;
 //import Search from "@components/Search.jsx";
 
-const response = await fetch("https://api.themoviedb.org/3/search/movie?api_key=f3fe6aa7b07bdfd66fb546a4f062cb2a&language=en-US&query="+search+"&page=1&include_adult=false");
+const response = await fetch("https://api.themoviedb.org/3/search/movie?api_key= &language=en-US&query="+search+"&page=1&include_adult=false");
 
 const data = await response.json();
 const detail = "/detail/";
