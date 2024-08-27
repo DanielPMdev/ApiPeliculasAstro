@@ -2,13 +2,13 @@
 import Layout from "@layouts/Layout.astro";
 
 const {id} = Astro.params;
-const response = await fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key=f3fe6aa7b07bdfd66fb546a4f062cb2a&language=en-US");
+const response = await fetch("https://api.themoviedb.org/3/movie/"+id+"?api_key= &language=en-US");
 
 const data = await response.json();
 const poster_url = "https://image.tmdb.org/t/p/w500/";
 
 //Trailer
-const fetchVideo = await fetch("https://api.themoviedb.org/3/movie/"+id+"/videos?api_key=f3fe6aa7b07bdfd66fb546a4f062cb2a&language=en-US");
+const fetchVideo = await fetch("https://api.themoviedb.org/3/movie/"+id+"/videos?api_key= &language=en-US");
 const trailer = await fetchVideo.json();
 const res = trailer.results.filter((p) => p.type === "Trailer");
 const video = res[0];
